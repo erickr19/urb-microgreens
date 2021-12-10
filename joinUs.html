@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="Description" content="Join our microgreen group today!">
+    <title>Buy a plot!</title>
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <!--Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <!--Local CSS-->
+    <link rel="stylesheet" href="css/styles.min.css">
+    <!--Include HTML Script-->
+    <script src="js/includes.js"></script>
+    <!--Validation Script-->
+    <script src="js/feedbackValidation.js"></script>
+
+</head>
+
+<body class="dm-serif lh-lg bg-custom-honeydew">
+    <div class="container-fluid bg-white">
+        <div data-my-include-html="includes/header.html"></div>
+        <div data-my-include-html="includes/navigation.html"></div>
+        <div>
+            <main id="main-content" class="text-black">
+                <div class="d-flex flex-column align-items-center mx-auto w-75">
+
+                    <form class="ms-2 my-5 bg-white p-3 rounded-2 mb-5 needs-validation"
+                        action="https://www.w3schools.com/action_page.php" method="get" id="joinForm" novalidate>
+                        <div class="d-flex justify-content-center mb-3">
+                            <h1 class="text-black">Ready to join us?</h1>
+                        </div>
+
+                        <!--Radio buttons-->
+                        <fieldset>
+                            <legend id="returningGardener" class="w-auto fw-bold small">Are you a returning gardener?
+                                <span class="text-danger small text-decoration-none">* - required</span></legend>
+                            <div class="d-flex">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="returning" id="yesReturn"
+                                        value="Y" required aria-labelledby="returningGardener yesReturn">
+                                    <label for="yesReturn" class="form-label">Yes</label>
+                                </div>
+                                <div class="form-check ms-3">
+                                    <input class="form-check-input" type="radio" name="returning" id="noReturning"
+                                        value="N" required aria-labelledby="returningGardener noReturning">
+                                    <label for="noReturning" class="form-label">No</label>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <!--First name-->
+                        <div class="mb-3">
+                            <label for="firstName" class="form-label">First Name: <span
+                                    class="text-danger small text-decoration-none">* - required</span></label>
+                            <input class="form-control" type="text" name="firstName" required aria-required="true"
+                                id="firstName" maxlength="40" pattern="[aA-zZ]{1,40}"
+                                title="Enter your first name. Up to 40 characters." placeholder="Joe">
+                        </div>
+                        <!--Last name-->
+                        <div class="mb-3">
+                            <label for="lastName" class="form-label">Last Name: <span
+                                    class="text-danger small text-decoration-none">* - required</span></label>
+                            <input class="form-control" type="text" name="lastName" required id="lastName"
+                                maxlength="60" pattern="[aA-zZ]{1,40}"
+                                title="Enter your last name. Up to 40 characters." placeholder="Macintosh">
+                        </div>
+                        <!--Email-->
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email: <span
+                                    class="text-danger small text-decoration-none">* - required</span></label>
+                            <input class="form-control" type="email" name="email" required id="email"
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                                title="Enter your email address. At least 1 ' @ ' symbol is required and a valid domain ' example.com ' "
+                                placeholder="joemacintosh@appleseed.com">
+                        </div>
+                        <!--Seed packets requested-->
+                        <div class="mb-3">
+                            <label for="seedNumber" class="form-label fw-bold text-dark">Number of seed packets
+                                requested: <span class="small text-decoration-none">(optional)</span></label>
+                            <select multiple size="3" class="form-select" name="numberOfSeedPackets" id="seedNumber">
+                                <option value="01">1</option>
+                                <option value="02">2</option>
+                                <option value="03">3</option>
+                                <option value="04">4</option>
+                                <option value="05">5</option>
+                            </select>
+                        </div>
+
+                        <h2>Join a Microgreen team!</h2>
+                        <p>Optional</p>
+                        <p class="small">Teams are a great way to get to know other gardeners and
+                            volunteer on your own schedule. Check the box for each team you are interested in,
+                            we will
+                            email
+                            you more info</p>
+                        <!--Checkboxes-->
+                        <fieldset>
+                            <legend class="w-auto fw-bold small text-dark">Check desired role(s)</legend>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="mentor" id="mentor"
+                                    value="mentor">
+                                <label class="form-label fw-bold" for="mentor">New Microgreen Mentor</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="photographer" id="photographer"
+                                    value="photographer">
+                                <label class="form-label fw-bold" for="photographer">Event photographer</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="water" id="water" value="water">
+                                <label class="form-label fw-bold" for="water">Water Maintenance </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="equipment" id="equipment"
+                                    value="equi">
+                                <label class="form-label fw-bold" for="equipment">Equipment Maintenance </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="comments">Any comments?:</label>
+                                <textarea class="form-control" rows="5" id="comments"></textarea>
+                            </div>
+                            <!--Form buttons-->
+                            <div class="my-2">
+                                <input class="btn btn-success me-5 text-white" type="submit" data-target="joinForm"
+                                    value="Submit">
+                                <input class="btn btn-secondary text-white" type="reset" value="Clear form">
+                            </div>
+                        </fieldset>
+
+                    </form>
+                </div>
+            </main>
+
+        </div>
+        <div data-my-include-html="includes/footer.html"></div>
+    </div>
+
+    <script>includeHTML();</script>
+
+</body>
+
+</html>

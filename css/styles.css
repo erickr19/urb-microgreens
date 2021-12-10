@@ -1,0 +1,94 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+/* Homepage image */
+.img-plant {
+    background-image: url(../images/micro1.jpg);
+    background-size: cover;
+}
+
+/* Header Image */
+.img-veggie-header {
+    background-image: url(../images/micro-header.jpg);
+}
+
+/* Veggie Background */
+.veggie-background {
+    background-image: url(../images/veggieBackground.jpg);
+}
+
+/* Current Page Indicator */
+li.current-page a {
+    color: #B9759B;
+}
+
+/* Skip Link */
+.skipLink {
+    position: absolute;
+    left: -1000px;
+}
+
+.skipLink:focus,
+.skipLink:active {
+    left: 0;
+}
+
+/*  Custom Colors */
+
+/* Green */
+
+.bg-custom-green {
+    background-color: #75B993;
+}
+
+/* Dark */
+.bg-custom-dark {
+    background-color: #1E1E1E;
+}
+
+/* Purple */
+.text-custom-purple {
+    color: #B9759B;
+}
+/* Purple background */
+.bg-custom-purple {
+    color: #B9759B;
+}
+
+/* Honeydew Green */
+.bg-custom-honeydew {
+    color: #F0FFF0;
+}
+/* Link Hover */
+.text-custom-link:hover {
+    color: #B9759B;
+    -webkit-transition: 0.3s ease-in;
+    -o-transition: 0.3s ease-in;
+    transition: 0.3s ease-in;
+}
+
+/* Custom Typography */
+.dm-serif {
+    font-family: "DM Serif Display", serif;
+}
+
+/* Additional placeholder text contrast */
+input::-webkit-input-placeholder {
+    color: #767676;
+}
+input::-moz-placeholder {
+    color: #767676;
+}
+input:-ms-input-placeholder {
+    color: #767676;
+}
+input::-ms-input-placeholder {
+    color: #767676;
+}
+input::placeholder {
+    color: #767676;
+}
